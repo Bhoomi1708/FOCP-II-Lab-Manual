@@ -1,0 +1,15 @@
+/*three marks and their average*/
+#include<iostream>
+int main(){
+    float stu_1, stu_2, stu_3;
+    std::cout<<"Please enter the marks of first student: ";
+    std::cin>> stu_1;
+    std::cout<<"Please enter the marks of second student: ";
+    std::cin>> stu_2;
+    std::cout<<"Please enter the marks of third student: ";
+    std::cin>> stu_3;
+    float average= (stu_1+ stu_2+ stu_3)/3;
+    std::cout<< "The average of the marks of the three students is "<<average;
+    
+    return 0;
+} 
