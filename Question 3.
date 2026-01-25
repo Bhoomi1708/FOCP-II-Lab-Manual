@@ -1,0 +1,29 @@
+/*Conversion of celsius to fahrenheit and vice versa*/
+#include<iostream>
+int main(){
+    float celsius;
+    float fah;
+    char temp;
+    float temp_1;
+    std::cout<< "Do you want temperature in C or F: ";
+    std::cin>> temp;
+    switch(temp){
+    case 'C': 
+    case 'c':
+    std::cout<<"***Here is the conversion of fahrenheit to celsius***\nPlease enter the temperature in fahrenheit: ";
+    std::cin>> fah;
+    celsius= (fah-32)*5/9;
+    std::cout<<"The temperature in celsius is "<<celsius;
+    break;
+    case 'F':
+    case 'f': std::cout<<"***Here is the conversion of celsius to fahrenheit***\nPlease enter the temperature in celsius: ";
+    std::cin>> celsius;
+    fah= (celsius*1.8)+32;
+    std::cout<<"The temperature in fahrenheit is "<<fah;
+    break;
+    default:
+    std::cout<<"INVALID\nEnter temperature in C or F";
+    break;
+}
+    return 0;
+}
