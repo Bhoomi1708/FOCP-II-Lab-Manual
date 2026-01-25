@@ -1,0 +1,19 @@
+/*discount on purchase*/
+#include<iostream>
+int main(){
+    int item_no;
+    int quantity;
+    float price;
+    std::cout<<"***Welcome to Happy Convenience store***\nPlease enter the item no. ";
+    std::cin>> item_no;
+    std::cout<<"Please enter the quantity of the item: ";
+    std::cin>>quantity;
+    std::cout<<"Please enter the unit price of the item: ";
+    std::cin>>price;
+    float amount= quantity*price;
+    float discount= 0.2* amount;
+    float total_amount= amount- discount;
+    std::cout<< "Amount without discount: "<<amount<<"\nDiscount: "<<discount;
+    std::cout<<"\nTotal discounted amount(20% discount): "<<total_amount;
+    return 0;
+}
