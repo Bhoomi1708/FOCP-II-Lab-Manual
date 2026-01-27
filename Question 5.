@@ -1,0 +1,36 @@
+/*Swapping of numbers*/
+#include<iostream>
+#include<iomanip>
+int main(){
+    int x, y, temp;
+    int num_1, num_2;
+    std::cout<<"Enter the two numbers:";
+    std::cin>>x>>y;
+    std::cout<<"Original values before swapping are num_1= "<<x<<" and num_2= "<<y<<std::endl;
+
+    std::cout<<"\n\n***FIRST METHOD: TEMPORARY VARIABLE***";
+    num_1= x;
+    num_2= y;
+    temp= num_1;
+    num_1= num_2;
+    num_2= temp;
+    std::cout<<"\nThe values of num_1 and num_2 after swapping are "<<num_1<<std::setw(4)<<num_2;
+
+    std::cout<<"\n\n***SECOND METHOD: ARITHMETIC OPERATIONS***";
+    num_1= x;
+    num_2= y;
+    num_1= num_1 +num_2;
+    num_2= num_1 -num_2;
+    num_1= num_1 -num_2;
+    std::cout<<"\nThe values of num_1 and num_2 after swapping are "<<num_1<<std::setw(4)<<num_2;
+
+    std::cout<<"\n\n***THIRD METHOD: BITWISE***";
+    num_1= x;
+    num_2= y;
+    num_1= num_1 ^num_2;
+    num_2= num_1 ^num_2; 
+    num_1= num_1 ^num_2;
+    std::cout<<"\nThe values of num_1 and num_2 after swapping are "<<num_1<<std::setw(4)<<num_2;
+
+    return 0;
+}
