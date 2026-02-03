@@ -1,0 +1,26 @@
+/*Accept three scores and identify the winner.*/
+#include<iostream>
+int main(){
+    int P1, P2, P3;
+    std::cout<<"***ENTER THE SCORES***\n"<<"\nPlayer 1: ";
+    std::cin>>P1;
+    std::cout<<"\nPlayer 2: ";
+    std::cin>>P2;
+    std::cout<<"\nPlayer 3: ";
+    std::cin>>P3;
+    if(P1==P2 && P1==P3 && P2==P3)
+    std::cout<<"The game is tied between the three";
+    else if(P1==P2 && P1>P3)
+    std::cout<<"Player 1 and Player 2 are tied for the win";
+    else if(P1==P3 && P1>P2)
+    std::cout<<"Player 1 and Player 3 are tied for the win";
+    else if(P3==P2 && P3>P1)
+    std::cout<<"Player 2 and Player 3 are tied for the win";
+    else if(P1>P2 && P1>P3)
+    std::cout<<"Player One is the WINNER!!!";
+    else if(P2>P1 && P2>P3)
+    std::cout<<"Player Two is the WINNER!!!";
+    else 
+    std::cout<<"Player Three is the WINNER!!!";
+    return 0;
+}
