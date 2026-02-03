@@ -1,0 +1,18 @@
+/*Solution to compute bonus, net salary, and display results.*/
+#include<iostream>
+int main(){
+    int num_emp, i;
+    std::cout<<"Enter the number of employees: ";
+    std::cin>>num_emp;
+    float basic_sal, bonus, net_sal;
+    for(i=1; i<=num_emp; i++){
+        std::cout<<"\nEMPLOYEE NO. "<<i<<std::endl;
+        std::cout<<"Enter the basic salary: ";
+        std::cin>>basic_sal;
+        bonus= 0.12* basic_sal;
+        net_sal= basic_sal+ bonus;
+        std::cout<<"Bonus(12%): "<<bonus;
+        std::cout<<"\nNet salary: "<<net_sal<<std::endl;
+    }
+    return 0;
+}
