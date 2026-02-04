@@ -1,0 +1,20 @@
+/*IDs from 1 to N and tags*/
+#include<iostream>
+#include<iomanip>
+int main(){
+    int i, N;
+    std::cout<<"Enter the no. of IDs: ";
+    std::cin>>N;
+    for(i=1; i<=N; i++){
+        std::cout<<"\nID No. "<<i<<":  ";
+        if(i%3==0 && i%5==0)
+        std::cout<<"Buzz and Fuzz";
+        else if(i%3==0)
+        std::cout<<"Buzz";
+        else if(i%5==0)
+        std::cout<<"Fuzz";
+        else
+        std::cout<<"NO TAG";
+    }
+    return 0;
+}
