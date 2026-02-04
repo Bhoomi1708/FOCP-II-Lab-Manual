@@ -1,0 +1,15 @@
+/*Vowel, consonant or number*/
+#include<iostream>
+int main(){
+    char sym;
+    std::cout<<"Enter the symbol: ";
+    std::cin>>sym;
+    if((sym=='A')||(sym=='E')||(sym=='I')||(sym=='O')||(sym=='U')
+    ||(sym=='a')||(sym=='e')||(sym=='i')||(sym=='o')||(sym=='u'))
+    std::cout<<"It is a VOWEL";
+    else if (sym>=48 && sym<=57)
+    std::cout<<"It is a NUMBER";
+    else
+    std::cout<<"It is a CONSONANT";
+    return 0;
+}
