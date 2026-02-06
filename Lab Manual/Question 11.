@@ -1,0 +1,21 @@
+/*10% discount on order*/
+#include<iostream>
+int main(){
+    int item;
+    float unit_price;
+    std::cout<<"Hello customer, welcome here!!\n";
+    std::cout<<"\nEnter the no. of items: ";
+    std::cin>>item;
+    std::cout<<"Enter the unit price of the items: ";
+    std::cin>>unit_price;
+    float amount= item*unit_price;
+    float discount= 0.1*amount;
+    float discount_amount= amount-discount;;
+    if(amount>1000){
+        std::cout<<"Expenses without discount: "<<amount;
+        std::cout<<"\nDiscount applied: "<<discount;
+        std::cout<<"\nTotal discounted expenses(10% discount): "<<discount_amount; }
+    else
+    std::cout<<"Total expenses: "<<amount;
+    return 0;
+}
