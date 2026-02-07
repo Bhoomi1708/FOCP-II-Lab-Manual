@@ -1,0 +1,18 @@
+/*Compute sum of all even and sum of all odd numbers.*/
+#include<iostream>
+using namespace std;
+int main(){
+    int i, a[10];
+    int count_even=0, count_odd=0; 
+    cout<<"Enter 5 elements: ";
+    for(i=0; i<5; i++){
+        cin>>a[i];
+        if(a[i]%2==0)
+        count_even+= a[i];
+        else
+        count_odd+= a[i];
+    }
+    cout<<"Sum of all odd numbers is "<<count_odd<<endl;
+    cout<<"Sum of all even numbers is "<<count_even;
+    return 0;
+}
