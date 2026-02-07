@@ -1,0 +1,28 @@
+/*Display all prime numbers between two limits*/
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b;
+    cout<<"Range: ";
+    cin>>a>>b;
+    int i, j;
+    int prime[100];
+    int count=0, flag;
+    for(i=a; i<=b; i++)
+    {
+        flag=1;
+    for(j=2; j<i; j++)
+    {
+        if(i%j==0){
+            flag=0;
+            break;}
+    }
+        if(flag==1)
+            {prime[count]=i;
+                count++;}
+    }
+    cout<<"Prime numbers: ";
+    for(i=0; i<count; i++)
+    cout<<prime[i]<<endl;
+    return 0;
+}
