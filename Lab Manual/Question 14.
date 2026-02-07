@@ -1,0 +1,32 @@
+/*Develop a menu-driven calculator program*/
+#include<iostream>
+using namespace std;
+int main(){
+    char sign;
+    int num_1, num_2;
+    cout<<"Enter the two numbers: ";
+    cin>>num_1>>num_2;
+    cout<<"\n||Select '+' for addition||";
+    cout<<"\n||Select '-' for subtraction||";
+    cout<<"\n||Select '*' for multiplication||";
+    cout<<"\n||Select '/' for division||\n";
+    cout<<"Enter the sign('+','-','*','/'): ";
+    cin>>sign;
+    switch(sign){
+        case '+': cout<<"Adding the numbers:\n";
+        cout<<num_1<<"+"<<num_2<<"= "<<num_1+num_2;
+        break;
+        case '-': cout<<"Subtracting the numbers:\n";
+        cout<<num_1<<"-"<<num_2<<"= "<<num_1-num_2;
+        break;
+        case '*': cout<<"Multiplying the numbers:\n";
+        cout<<num_1<<"*"<<num_2<<"= "<<num_1*num_2;
+        break;
+        case '/': cout<<"Dividing the numbers:\n";
+        cout<<num_1<<"/"<<num_2<<"= "<<num_1/num_2;
+        break;
+        default: cout<<"/nInvalid option";
+        break;
+    }
+    return 0;
+}
