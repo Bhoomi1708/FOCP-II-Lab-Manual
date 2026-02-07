@@ -1,0 +1,24 @@
+/*Accept a number and check whether it is prime.*/
+#include<iostream>
+using namespace std;
+int main(){
+    int i, num;
+    int flag;
+    cout<<"Enter the number: ";
+    cin>>num;
+    for(i=2; i<num/2; i++)
+    {
+        if(num%i==0)
+        {
+            flag=1;
+            break;
+        }
+        else
+        flag=0;
+    }
+    if(flag==1)
+    cout<<num<<" is a composite no.";
+    else
+    cout<<num<<" is a prime no.";
+    return 0;
+}
