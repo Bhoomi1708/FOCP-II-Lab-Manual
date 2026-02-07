@@ -1,0 +1,19 @@
+/*QUESTION 30. Compute total salary and average salary of 10 employees*/
+#include<iostream>
+int main(){
+    int i;
+    float a[10];
+    float total=0;
+      
+    std::cout<<"Enter the salaries: ";
+    for(i=0; i<10; i++)
+    {
+        std::cin>>a[i];
+        total+=a[i];
+    }
+
+    float average= total/10;
+    std::cout<<"The total salary is "<<total<<std::endl;
+    std::cout<<"The average salary is "<<average;
+    return 0;
+}
