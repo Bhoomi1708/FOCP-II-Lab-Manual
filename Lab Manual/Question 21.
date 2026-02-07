@@ -1,0 +1,17 @@
+/*Rectangular hollow frames*/
+#include<iostream>
+using namespace std;
+int main(){
+    int i, j;
+    int r=8, c=8;
+    for(i=1; i<=r; i++){
+        for(j=1; j<=c; j++){
+            if(j==1 ||j==c ||i==1 ||i==r )
+            cout<<"*";
+            else
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
