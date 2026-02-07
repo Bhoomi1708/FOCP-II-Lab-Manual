@@ -1,0 +1,30 @@
+/*Calculate the roots of a quadratic equation.*/
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+    float a,b,c;
+    cout<<"Enter the coefficient a:";
+    cin>>a;
+    cout<<"Enter the coefficient b:";
+    cin>>b;
+    cout<<"Enter the coefficient c:";
+    cin>>c;
+    float D= (b*b)- (4*a*c);
+    int root_1, root_2;
+    if(D>0)
+    {   cout<<("Roots are real and unequal\n");
+        root_1= (-b+sqrt(D))/(2*a);
+        root_2= (-b-sqrt(D))/(2*a);
+        cout<<"Roots are "<<root_1<<" and "<<root_2;}
+    else if(D==0)
+    {   cout<<("Roots are real and equal\n");
+        cout<<"Root is "<<-b/(2*a);}
+    else
+    {   cout<<"Roots are imaginary\n";
+        root_1= -b/(2*a);
+        root_2= (sqrt(-D))/(2*a);
+        cout<<"Roots are "<<root_1<<"+"<<root_2<<"i  and "<<root_1<<"-"
+        <<root_2<<"i";}
+    return 0;
+}
