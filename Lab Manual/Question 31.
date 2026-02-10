@@ -1,0 +1,19 @@
+/*Solution to count how many numbers are divisible by 3 and 5 in an array.*/
+#include<iostream>
+int main(){
+    int a[10];
+    int count=0;
+    std::cout<<"Enter the elements: ";
+    for(int i=0; i<5; i++){
+        std::cin>>a[i];
+        if(a[i]%3==0 && a[i]%5==0){
+            if(a[i]==0)
+            continue;
+            else
+            count++;
+        }
+    }
+    std::cout<<"Numbers divisible by 3 and 5: "<<count;
+
+    return 0;
+}
