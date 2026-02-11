@@ -1,0 +1,20 @@
+//Calling by value
+#include<iostream>
+void swap(int a, int b)  
+{
+    std::cout<<"\nA and B before swap in function: "<<a<<b;
+    int temp=a;
+    a=b;
+    b=temp;
+    std::cout<<"\nA and B after swap in function: "<<a<<b;
+}
+
+int main(){
+    int x,y;
+    std::cout<<"provide 2 integers: ";
+    std::cin>>x>>y;
+    std::cout<<"x and y in main before function call: "<<x<<y;
+    swap(x,y);
+    std::cout<<"\nx and y in main after function call: "<<x<<y;
+    return 0;
+}
