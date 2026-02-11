@@ -1,0 +1,11 @@
+//forward referencing
+#include<iostream>
+using namespace std;  
+void welcome()
+{
+    cout<<"Welcome user";
+}
+int main(){
+    welcome();
+    return 0;
+}
