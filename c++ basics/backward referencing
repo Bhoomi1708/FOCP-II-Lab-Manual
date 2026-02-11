@@ -1,0 +1,19 @@
+//Backward referencing
+#include<iostream>
+using namespace std;
+void welcome(void);         //no return type no parameter
+void welcome(string);       //no return type but there is parameter
+int main(){
+    welcome();
+    std::cout<<std::endl;
+    welcome("Bhoomi");
+    return 0;
+}
+void welcome()
+{            //NO SEMICOLON ON definition only on declaration
+    cout<<"Welcome user";
+}
+void welcome(string name)
+{
+    cout<<"Welcome back "<<name;
+}
