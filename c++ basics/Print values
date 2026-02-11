@@ -1,0 +1,12 @@
+//Print a, b and c
+#include<iostream>
+int main()
+{
+    int a=16;
+    float b=17;
+    char c= 'a';
+    std::string name= "Bhoomi";
+    std::cout<<"Hello "<<name<< "\nPlease enter the values of a, b and c\na:"
+    <<a<<std::endl<<"b:"<<b<<std::endl<<"c:"<<c;
+    return 0;
+}
