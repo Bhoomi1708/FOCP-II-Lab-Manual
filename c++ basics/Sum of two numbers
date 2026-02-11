@@ -1,0 +1,24 @@
+/*Sum of two numbers of different datatypes with backward referencing */
+#include<iostream>
+using namespace std;
+int sum(int, int);
+float sum(float, float);
+double sum(double, double);
+int main(){
+    cout<<sum(5,5);
+    cout<<sum(5.6f, 6.7f);        //by adding f we made it float
+    cout<<sum(5.6789, 6.7891);
+    return 0;
+}
+int sum(int a, int b){
+    cout<<"\nint sum: ";
+    return(a+b);
+}
+float sum(float a, float b){
+    cout<<"\nfloat sum: ";
+    return(a+b);
+}
+double sum(double a, double b){
+    cout<<"\ndouble sum: ";
+    return(a+b);
+}
