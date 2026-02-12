@@ -1,0 +1,20 @@
+/*Solution to find the largest and second largest number in an array of size 5.*/
+#include<iostream>
+int main(){
+    int i=0;
+    int a[10];
+    int largest= a[0];
+    int sec_largest= a[0];
+    std::cout<<"Enter the elements: ";
+    while(i<5){
+        std::cin>>a[i];
+        i++;
+    }
+    for(i=1; i<5; i++){
+        if(a[i]> largest)
+        {sec_largest= largest;
+        largest= a[i];}
+    }
+    std::cout<<"The largest no. is "<<largest<<std::endl<<"The second largest no. is "<<sec_largest;
+    return 0;
+}
