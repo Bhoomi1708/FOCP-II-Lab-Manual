@@ -1,0 +1,28 @@
+/*Implement a solution to store two 3×3 matrices and compute their sum.*/
+#include<iostream>
+int main(){
+    int i, j;
+    int a[3][3];
+    int b[3][3];
+    int c[3][3];
+    std::cout<<"Enter the elements for 1st matrix: \n";
+    for(i=0; i<3; i++){
+        for(j=0; j<3; j++)
+            std::cin>>a[i][j];
+    }
+    std::cout<<"Enter the elements for 2nd matrix: \n";
+    for(i=0; i<3; i++){
+        for(j=0; j<3; j++)
+            std::cin>>b[i][j];
+    }
+    for(i=0; i<3; i++){
+        for(j=0; j<3; j++)
+        c[i][j]= a[i][j]+b[i][j];
+    }
+    for(i=0; i<3; i++){
+        for(j=0; j<3; j++)
+        std::cout<<c[i][j]<<" ";
+        std::cout<<std::endl;
+    }
+    return 0;
+}
