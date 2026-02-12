@@ -1,0 +1,19 @@
+/*A grading system stores marks of multiple students in arrays. 
+Implement a solution to accept marks in 5 subjects for 3 students, then display:
+• marks in 2nd subject of 1st student, and
+• marks in 5th subject of 3rd student.*/
+#include<iostream>
+int main(){
+    int i, j;
+    int a[5][10];
+    for(i=1; i<=3; i++){
+        std::cout<<"\nStudent no. "<<i<<std::endl;
+        for(j=1; j<=5; j++){
+            std::cout<<"Marks of subject no. "<<j<<" ";
+            std::cin>>a[i][j];
+        }
+    }
+    std::cout<<"\n\nMarks of 1st student in 2nd subject: "<<a[1][2];
+    std::cout<<"\nMarks of 3rd student in 5th subject: "<<a[3][5];
+    return 0;
+}
