@@ -1,0 +1,27 @@
+/*
+#include<iostream>
+using namespace std;
+void change(int *p){
+    int temp= 200;
+    p= &temp;
+}
+int main(){
+    int x=50;
+    change(&x);
+    cout<<x;
+}
+*/
+
+//modify function so output becomes 200
+
+#include<iostream>
+using namespace std;
+void change(int *p){
+    int temp= 200;
+    *p=temp;
+}
+int main(){
+    int x=50;
+    change(&x);
+    cout<<x;
+}
