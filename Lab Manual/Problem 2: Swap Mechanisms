@@ -1,0 +1,28 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+void swapByValue(int a, int b)
+{
+    int temp=a;
+    a=b;
+    b=temp;
+    cout<<"Values of a and b by value: "<<a<<setw(2)<<b;
+
+}
+void swapByReference(int &a, int &b){
+    int temp=a;
+    a=b;
+    b=temp;
+    cout<<"\nValues of a and b by reference: "<<a<<setw(2)<<b;
+
+}
+int main(){
+int x, y;
+cout<<"Enter values of x and y:";
+cin>>x>>y;
+swapByValue(x,y);
+cout<<"\nValue of x and y by value function: "<<x<<setw(2)<<y;   //value is same as input
+swapByReference(x,y);
+cout<<"\nValue of x and y by reference function: "<<x<<setw(2)<<y;   //value is changed
+return 0;
+}
