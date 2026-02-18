@@ -1,0 +1,24 @@
+//Store and display car details
+#include<iostream>
+using namespace std;
+class car{
+    float price;
+    string brand;
+    string colour;
+    
+    public:
+    void input_display(){
+        cin>>price;
+        cin>>brand;
+        cin>>colour;
+    }
+    void output_display(){
+        cout<<"Price: "<<price<<"\nBrand: "<<brand<<"\nColour: "<<colour;
+    }
+};
+int main(){
+    car c1;
+    cout<<"Enter Price, Brand and colour: \n";
+    c1.input_display();
+    c1.output_display();
+}
