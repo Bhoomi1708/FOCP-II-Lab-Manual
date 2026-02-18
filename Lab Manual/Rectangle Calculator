@@ -1,0 +1,32 @@
+//Rectangle Calculator
+#include<iostream>
+using namespace std;
+class Rectangle{
+    float length;
+    float width;
+    float area;
+    float perimeter;
+    public:
+    void inputDimensions(){
+        cin>>length;
+        cin>>width;
+    }
+    float calculateArea(){
+        area= length*width;
+    }
+    float calculatePerimeter(){
+        perimeter= 2*length+ 2*width;
+    }
+    void displayResult(){
+        cout<<"Area: "<<area<<"\nPerimeter: "<<perimeter;
+    }
+
+};
+int main(){
+    Rectangle r1;
+    cout<<"Enter values of length and width: \n";
+    r1.inputDimensions();
+    r1.calculateArea();
+    r1.calculatePerimeter();
+    r1.displayResult();
+}
