@@ -1,0 +1,33 @@
+//Employee Information System
+#include<iostream>
+using namespace std;
+class employee{
+    int empId;
+    string name;
+	double monthlySalary;
+    public:
+    void inputDetails(){
+        cout<<"\nEmployee ID: ";
+        cin>>empId;
+        cout<<"Employee name: ";
+        cin.ignore();
+        getline(cin,name);
+        cout<<"Monthly salary: ";
+        cin>>monthlySalary;
+    }
+    double calculateAnnualSalary(){
+        double annualSalary= monthlySalary*12;
+        return annualSalary;
+    }
+    void displayDetails(){
+        cout<<"\n||Employee Information||";
+        cout<<"\nEmployee name: "<<name<<"\nEmployee ID: "<<empId<<"\nMonthly salary: "<<monthlySalary;
+        cout<<"\nAnnual salary: "<<calculateAnnualSalary();
+    }
+};
+int main(){
+    employee e1;
+    cout<<"Enter employee information-";
+    e1.inputDetails();
+    e1.displayDetails();
+}
