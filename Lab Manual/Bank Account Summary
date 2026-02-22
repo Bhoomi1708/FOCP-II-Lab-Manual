@@ -1,0 +1,49 @@
+//Bank Account Summary
+#include<iostream>
+using namespace std;
+class BankAccount{
+    string accountHolderName;
+    int accountNumber;
+    double balance;
+    public:
+    void inputDetails(){
+        cout<<"\nEnter account holder name: ";
+        getline(cin,accountHolderName);
+        cout<<"Enter account number: ";
+        cin>>accountNumber;
+        cout<<"Enter current balance: ";
+        cin>>balance;
+    }
+    void displayDetails(){
+        cout<<"\nAccount holder name: "<<accountHolderName;
+        cout<<"\nAccount Number: "<<accountNumber;
+        cout<<"\nCurrent account balance: "<<balance;
+    }
+    void deposit(double amount){
+        balance+=amount;
+        cout<<"Current Balance: "<<balance;
+    }
+    void withdraw(double amount){
+        balance-=amount;
+        cout<<"Current Balance: "<<balance;
+    }
+};
+int main(){
+    BankAccount b1;
+    double amount;
+    bool option;
+    cout<<"Enter Account details- \n";
+    b1.inputDetails();
+    b1.displayDetails();
+    cout<<"\nDo you want to deposit or withdraw money";
+    cout<<"\n||Select 1 to deposit or 0 to withdraw||\n";
+    cin>>option;
+    if(option==true){
+    cout<<"\nEnter the amount to deposit: ";
+    cin>>amount;
+    b1.deposit(amount);}
+    else{
+    cout<<"\nEnter the amount to withdraw: ";
+    cin>>amount;
+    b1.withdraw(amount);}
+}
