@@ -1,0 +1,28 @@
+//Candy crush game
+#include<iostream>
+using namespace std;
+class Candy{
+    string color; int points;
+    public:
+    void setCandy(string c, int p)
+    {
+        color=c;points=p;
+    }
+    int displayCandy()
+    {
+        cout<<"color: "<<color<<"\npoints: "<<points<<endl;
+    }
+};
+
+int main(){
+    Candy c1, c2;   //object or instance of the class candy
+    string clr; int pts;
+    cout<<"Enter the color of the candy and your points:  ";
+    cin>>clr>>pts;
+    c1.setCandy(clr, pts);
+    c1.displayCandy();
+    cout<<"\nEnter the color of the candy and your points:  ";
+    cin>>clr>>pts;
+    c2.setCandy(clr, pts);
+    c2.displayCandy();
+}
