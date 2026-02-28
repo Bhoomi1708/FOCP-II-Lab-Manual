@@ -1,0 +1,27 @@
+//Temperature Converter
+#include<iostream>
+using namespace std;
+class Temperature{
+    float celsius;
+    public:
+    void inputTemperature();
+	float convertToFahrenheit();
+	void displayResult();
+};
+void Temperature::inputTemperature(){
+    cout<<"Enter temp. in celsius: ";
+    cin>>celsius;
+}
+float Temperature::convertToFahrenheit(){
+    return (celsius*1.8)+32;
+}
+void Temperature::displayResult(){
+    cout<<"Temperature in celsius:  "<<celsius;
+    cout<<"Temperature in fahrenheit:  "<<convertToFahrenheit();
+}
+int main(){
+    Temperature t1;
+    t1.inputTemperature();
+    t1.displayResult();
+    return 0;
+}
