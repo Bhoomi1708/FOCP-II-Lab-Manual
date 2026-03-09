@@ -1,0 +1,33 @@
+//constructor with the initialization list
+#include<iostream>
+using namespace std;
+class A{
+int x, y;
+public:
+A();
+A(int);
+A(int, int);
+~A();
+void display();
+};
+A::A():x(0),y(0)    //constructor with the initialization list
+{cout<<"\ndefault";}
+A::A(int n1):x(n1),y(n1)     
+{cout<<"\nsingle parametrized";}
+A::A(int n1, int n2):x(n1),y(n2)    
+{cout<<"\ndouble parametrized";}
+void A::display(){
+    cout<<"\n x= "<<x<<" y= "<<y;}
+A::~A()
+{cout<<"\nobject destroyed";}
+
+int main(){
+    int n1, n2;
+    cout<<"value of n1 and n2= ";
+    cin>>n1>>n2;
+    A a1, a2(n1), a3(n1, n2);
+    a1.display();
+    a2.display();
+    a3.display();
+    return 0;
+}
