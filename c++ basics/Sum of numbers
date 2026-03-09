@@ -1,0 +1,17 @@
+//Sum
+#include<iostream>
+using namespace std;
+int sum(int x);
+int main(){
+    int n;
+    cout<<"sum of how many numbers: ";
+    cin>>n;
+    cout<<"sum: "<<sum(n);
+    return 0;
+}
+int sum(int x){
+    if(x==1)
+    return 1;
+    else
+    return x+sum(x-1);
+}
