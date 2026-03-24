@@ -1,0 +1,32 @@
+//Inheritance
+#include<iostream>
+using namespace std;
+class A{
+int var;
+
+public:
+A(){
+    cout<<"\ndefault constructor"; var=120;}
+void display(){
+    cout<<"\n var= "<<var;}
+display_msg(){
+    cout<<"\nbase case ";}
+};
+
+class B: public A{
+    int var2;
+    public:
+    B()
+    {cout<<"\n B default contructor"; 
+    var2=189;}
+    void display_b()
+    {cout<<"\nvar2= "<<var2;}
+};
+
+int main(){
+    B obj1;
+    obj1.display();
+    obj1.display_msg();
+    obj1.display_b();
+    return 0;
+}
