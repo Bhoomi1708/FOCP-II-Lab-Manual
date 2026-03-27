@@ -1,0 +1,45 @@
+/*Create a class Person with data members name and age, and a function displayPerson(). Derive a class Student that adds roll number and a function
+displayStudent(). Show how a Student object can access both base and derived class functions.*/
+#include<iostream>
+using namespace std;
+class Person{
+    string name; int age;
+    public:
+    Person(){
+        cout<<"\n person default ";
+        name="default";
+        age=18;
+    }
+    Person(string name, int age){
+        cout<<"\n person parametrized  ";
+        this->name= name;
+        this->age= age;
+    }
+    void displayPerson(){
+        cout<<"\n Name: "<<name<<"\n Age: "<<age;
+    }
+};
+
+class Student: public Person{
+    string rollno;
+    public:
+    Student(){
+        cout<<"\n Student default";
+        rollno="25CSU000";
+    }
+    Student(string nm, int ag, string rno): Person(nm, ag){
+        cout<<"\n Student parametrized";
+        rollno=rno;
+    }
+    void displayStudent(){
+        displayPerson();
+        cout<<"\n Rollno: "<<rollno;
+    }
+};
+
+int main(){
+    Student p1, p2("Section B", 17, "25CSU111");
+    p1.displayStudent();
+    p2.displayStudent();
+    return 0;
+}
