@@ -1,0 +1,52 @@
+//Virtual functions
+#include<iostream>
+class Shape /*final class cannot be inherited*/{
+    public:
+    virtual void area(){
+        std::cout<<"\nNo dimensions, no area";
+    }
+    virtual void perimeter(){
+        std::cout<<"\nNo dimensions, no perimeter";
+    }
+    virtual void dimension(){
+        std::cout<<"\nNothing to display";
+    }
+    /*virtual*/ void display(){       // to restrict methode from being inherited
+    /*final*/   std::cout<<"\n************We are 2D shapes************";
+    }
+};
+class Square: public Shape{
+    int side;
+    public:
+    Square(int s=0){
+        side=s;
+    }
+    void area(){ //overiding
+        std::cout<<"\nArea= "<<side*side;
+    }
+    void perimeter(){ //overiding
+        std::cout<<"\nPerimeter= "<<4*side;
+    }
+    void dimension(){ //overiding
+        std::cout<<"\nSide is= "<<side;
+    }
+    /*void display(){
+    std::cout<<"Let's"}*/
+};
+
+int main(){
+    Shape *s1, s2;
+    Square ss(12);
+    s1= &ss; //pointing to the child class
+    s1-> area();
+    s1->perimeter();
+    s1->dimension();
+    s1->display();
+    s1= &s2; //pointing to same class shape object, so behave like shape
+    
+    s1->area();
+    s1->perimeter();
+    s1->dimension();
+    s1->display(); //cout<<"\n side"<<s1.side;
+    return 0;
+}
