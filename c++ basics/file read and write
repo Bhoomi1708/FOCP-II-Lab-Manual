@@ -1,0 +1,24 @@
+//file read and output
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+    ofstream fout("FOCP_file.txt", ios::out); //,ios::app
+    // fout<<"0000000\n 12345 hhbhbc\n";
+    fout<<"jbkoonvo";
+    fout<<"\n123456";
+    fout.close();
+    cout<<"Data written successfully";
+
+    ifstream fin("FOCP_file.txt");
+    string line;
+    // if(!fin){
+    //     cout<<"\n issue with the file, cant read";
+    // }
+    int count=0;
+    while(fin>>line){
+        cout<<line<<endl;
+        // count++;
+    }
+    fin.close();
+}
