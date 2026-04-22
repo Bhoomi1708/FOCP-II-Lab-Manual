@@ -1,0 +1,18 @@
+//file copy
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+
+    ifstream fin("FOCP_file.txt");
+    ofstream fout("FOCP_copy.txt");
+    string line;
+
+    while(getline(fin,line))
+    {fout<<line<<endl;}
+    cout<<"copied";
+    fin.close();
+    remove("FOCP_file.txt");
+    fout.close();
+    
+}
