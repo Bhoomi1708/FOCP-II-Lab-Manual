@@ -1,0 +1,17 @@
+//Insert + Erase
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+ vector<int> v = {1, 2, 3, 4};
+ // Insert at position
+ v.insert(v.begin() + 2, 99); 
+ for(int x : v) {
+ cout << x << " ";
+ }// before index 2
+ // Erase element
+ v.erase(v.end()-1); // remove index 1
+ for(int x : v) {
+ cout << endl<<x << " ";
+ }
+}
