@@ -1,0 +1,16 @@
+//namespace
+#include<iostream>
+using namespace std;
+
+namespace MySpace{
+    int x=10;
+    void show(){
+        cout<<"Hello";    }
+}
+
+int main(){
+    int x=100;
+    cout<<"\nmy space: "<<MySpace::x<<endl;
+    cout<<"normal variable x: "<<x<<endl;
+    MySpace::show();
+}
